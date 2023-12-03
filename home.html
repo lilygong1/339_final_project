@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <span class="emoji-logo" aria-label="Logo"><a href = "index.html">👩‍💻</a></span>
+          </div>          
+        <nav>
+          <ul class="nav-links">
+            <li class="nav-item"><a href="home.html">Home</a></li>
+            <li class="nav-item"><a href="about.html">About Me</a></li>
+            <li class="nav-item"><a href="projects.html">Projects</a></li>
+            <!-- <li class="nav-item"><a href="#">Rush</a></li> -->
+          </ul>
+        </nav>
+        <!-- <div class="business-card">
+          <a href="#">Tau Epsilon Kappa<br>tauepsilonkappa.com</a>
+        </div> -->
+      </header>
+    
+
+<div class="intro-section">
+    <div class="intro-content">
+      <img src="images/headshot.JPG" alt="headshot" class="profile-picture">
+      <h1>Lily Gong</h1>
+      <p>I am a third year student at the University of Michigan studying Computer Science and UX design. Check out some of my interests below!</p>
+      <!-- ... additional content ... -->
+    </div>
+  </div>
+  
+  
+<div class="grid-container">
+  <!-- Repeat this block for each interest/item -->
+  <div class="grid-item" data-modal-content="Formula One is the highest class of single-seater auto racing sanctioned by the FIA. 
+  I've been a fan since COVID, and it's been fun to learn more about the rich history of the sport as well as learn more about the teams.
+   My favorite team is Ferrari, which currently has drivers Charles Leclerc and Carlos Sainz. This year, they finished third in the constructors championship, which is the team championship. 
+   Next year, Ferrari fans are hoping for an improved and more competitive car so we might have a chance at winning the championship next year.">
+    <img src="images/f1.jpg" alt="formulaone">
+    <div class="overlay">
+      <div class="text">My favorite sport is Formula One!</div>
+    </div>
+  </div>
+  <div class="grid-item" data-modal-content="Weightlifting is not just a sport, but a way to maintain health and discipline. It's a key part of my routine for staying active.
+  My current split, or lifting schedule is six days a week, with a day off for rest or to go to pilates. My favorite days of the week are pull days, which target back and bicep muscles!
+  Lifting is a great way for me to structure my day, as I usually start the day by going to the gym. This helps me maintain a good amount of energy throughout the day and motivates me to wake up early.
+  Additionally, my interest in weightlifting has also helped me improve my diet. Over time, I have slowly shifted to eating foods that are high in protein, and I am generally more conscious about the health level
+  of foods that I put into my body.">
+    <img src="images/weightlifting.jpg" alt="weightlifting">
+    <div class="overlay">
+      <div class="text">I spend a lot of my free time weightlifting!</div>
+    </div>
+  </div>
+  <div class="grid-item" data-modal-content="Pride and Prejudice is a classic novel that captures the nuances of early 19th-century life in England. I have seen this movie quite a few times,
+  and it's something that I can watch over and over again without getting bored of it. One of my favorite parts of this movie is the soundtrack, and I
+  listen to it often. I also love the book, and I've read all of Jane Austen's novels. Sense and Sensibility and Persuasion are some other favorite Jane Austen books of mine.">
+    <img src="images/prideandprejudice.jpg" alt="prideandprejudice">
+    <div class="overlay">
+      <div class="text">I love to watch movies; Pride and Prejudice is my favorite movie!</div>
+    </div>
+  </div>
+  <div class="grid-item" data-modal-content="Traveling opens up new horizons and is essential for personal growth. My trip to Spain is something I look forward to, for both the culture and the adventure.
+  One of my favorite trips I have been on with my family was to Australia and New Zealand. There, we got to explore the nature and beauty of the two countries.
+  One of my favoite parts of Australia was snorkeling in the Great Barrier Reef and seeing the beautiful colors and fish. That was quite a fun adventure and I'd never seen anything like it before! 
+  In New Zealand, we went to see the Hobbit set, and saw the little buildings they used for the movie and got to experience a restaurant and scenery from the movie too!">
+    <img src="images/airport.jpg" alt="airport">
+    <div class="overlay">
+      <div class="text">I love to travel! I am going on a family trip to Spain over winter break!</div>
+    </div>
+  </div>
+  <!-- ... other items -->
+</div>
+
+<!-- Modal - hidden by default, will be displayed when an image is clicked -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>More information...</p>
+    <!-- Additional content goes here -->
+  </div>
+</div>
+
+<script>
+// JavaScript for handling the modal
+var modal = document.getElementById('myModal');
+var images = document.getElementsByClassName('grid-item');
+var modalContent = document.querySelector('.modal-content p');
+
+for (var i = 0; i < images.length; i++) {
+  images[i].onclick = function(){
+    var content = this.querySelector('.overlay .text').innerHTML;
+    var additionalContent = this.getAttribute('data-modal-content'); // Get the additional content
+
+    modal.style.display = "block";
+    modalContent.innerHTML = content + "<p>" + additionalContent + "</p>"; // Include it in the modal
+  }
+}
+
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const navLinks = document.querySelectorAll('.nav-links .nav-item a');
+      const currentUrl = window.location.href;
+  
+      navLinks.forEach((link) => {
+        if (currentUrl.includes(link.href)) {
+          link.parentElement.classList.add('active');
+        }
+      });
+    });
+  </script>
+  
+
+</body>
+</html>

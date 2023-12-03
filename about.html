@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <span class="emoji-logo" aria-label="Logo"><a href = "index.html">👩‍💻</a></span>
+          </div>          
+        <nav>
+          <ul class="nav-links">
+            <li class="nav-item"><a href="home.html">Home</a></li>
+            <li class="nav-item"><a href="about.html">About Me</a></li>
+            <li class="nav-item"><a href="projects.html">Projects</a></li>
+            <!-- <li class="nav-item"><a href="#">Rush</a></li> -->
+          </ul>
+        </nav>
+        <!-- <div class="business-card">
+          <a href="#">Tau Epsilon Kappa<br>tauepsilonkappa.com</a>
+        </div> -->
+      </header>
+    <!-- Include your header here -->
+
+    <section class="about-section">
+        <h2>My Education</h2>
+        <div class="timeline">
+            <div class="timeline-block">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>University of Michigan</h3>
+                    <span>Bachelors Degree | 2021-2025</span>
+                    <p>Major: Computer Science</p>
+                    <p>Minor: UX Design</p>
+                    <p>Relevant coursework: Discrete Math, Statistics (used R), Programming and Introductory Data Structures, Data Structures and Algorithms, Computer Architecture, Computer Science Theory</p>
+                    <p>Fall 2023: Computer Security, Web Systems, Web Design and Development, Building Data-Driven Apps</p>
+                    <p>Winter 2024: Database Management Systems, User Interface Development</p>
+                    <p>Awards: William J Branston Prize, Dean's List</p>
+                </div>
+            </div>
+            <div class="timeline-block">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Palisades Charter High School</h3>
+                    <span>2017-2021</span>
+                    <p>Awards: National Center for Women and Information Technology, Aspirations in Computing- Honorable Mention Affiliate, National Arts and Writing Scholastic LA- Silver Key in Writing</p>
+                </div>
+            </div>
+            <!-- More timeline blocks for other education entries -->
+        </div>
+    </section>
+
+    <section class="experience-section">
+        <h2>My Experience</h2>
+        <div class="timeline">
+            <div class="timeline-block">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Blue Cross Blue Shield of Michigan</h3>
+                    <span>Information Technology Intern | Detroit, MI | May 2023 - August 2023</span>
+                    <ul>
+                        <li>Assist in creation of UI components for a web application using Vue.js framework. Learned and tested Loopback4 API implementation and assisted team members in writing Python scripts and queries</li>
+                        <li>Developing web-based training resource content and online tools to access LGBTQ+ health education resources for Corktown Health Center, a non-profit affiliate of BCBSM that creates specialized trainings for community members</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-block">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>The Michigan Daily Web Team</h3>
+                    <span>Mobile App Developer | Ann Arbor, MI | September 2021 - April 2022</span>
+                    <ul>
+                        <li>Use React Native to build app from scratch with product design/UX design team to maximize user experience</li>
+                        <li>Learned product development cycle and worked with all sections of the Daily to streamline multiple types of information,
+                            and gather latest stores, photo journals, and games from different departments weekly</li>
+                        <li>Implement features such as push notifications and dark mode, collaborate on course guide tracker</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-block">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>HackGuild</h3>
+                    <span>Web Development Intern | Virtual | May 2020 - March 2021</span>
+                    <ul>
+                        <li>Developed website with a team of 5 using Gatsby with React.js, JSX, SCSS, contributed to UX design & mapping</li>
+                        <li>Introductory backend development with PHP & SQL, connecting front and backend components for data analysis</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="extracurriculars-section">
+        <h2>My Extracurriculars</h2>
+        <div class="extracurriculars-grid">
+            <div class="extracurricular-item">
+                <img src="images/tek.jpg" alt="TEK" class="extracurricular-image">
+                <div class="extracurricular-content">
+                    <h3>Senior Vice President, Tau Epsilon Kappa Professional Fraternity </h3>
+                    <p>Tau Epsilon Kappa is a co-ed professional technical fraternity committed to professional technical development as well as the advancement of social and academic excellence among the fraternity brothers.</p>
+                </div>
+            </div>
+            <div class="extracurricular-item">
+                <img src="images/geecs.png" alt="GEECS" class="extracurricular-image">
+                <div class="extracurricular-content">
+                    <h3>GEECS</h3>
+                    <p>Girls in Electrical Engineering and Computer Science (GEECS) is a student organization that encourages the professional, academic, and social development of individuals who identify as women in technology.</p>
+                </div>
+            </div>
+            <div class="extracurricular-item">
+                <img src="images/mss.jpeg" alt="MSS" class="extracurricular-image">
+                <div class="extracurricular-content">
+                    <h3>Michigan Sustainable Strategy</h3>
+                    <p>To accelerate students' education and participation in sustainability for their prospective professional careers</p>
+                </div>
+            </div>
+            <div class="extracurricular-item">
+                <img src="images/coy.jpg" alt="COY" class="extracurricular-image">
+                <div class="extracurricular-content">
+                    <h3>Children of Yost</h3>
+                    <p>The best fanbase in college hockey!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const navLinks = document.querySelectorAll('.nav-links .nav-item a');
+      const currentUrl = window.location.href;
+  
+      navLinks.forEach((link) => {
+        if (currentUrl.includes(link.href)) {
+          link.parentElement.classList.add('active');
+        }
+      });
+    });
+  </script>
+  
+
+</body>
+</html>
