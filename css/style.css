@@ -333,3 +333,147 @@ h2 {
         grid-template-columns: 1fr; /* Stack image and content on smaller screens */
     }
 }
+
+/* Mobile View */
+@media (max-width: 768px) {
+    body, html {
+        font-size: 14px; /* Adjust base font size for mobile */
+    }
+  
+    .bg {
+        /* Background styles can remain the same unless you want to change the image for mobile */
+    }
+  
+    .text-center {
+        font-size: 16px; /* Adjust text size for mobile */
+        padding: 0 10px; /* Add padding on the sides */
+    }
+  
+    .main-heading {
+        font-size: 30px; /* Smaller font size for mobile */
+    }
+  
+    .tagline {
+        font-size: 18px;
+    }
+  
+    header {
+        flex-direction: column;
+        align-items: center; /* Center items when stacked */
+    }
+  
+    .logo-container img,
+    .emoji-logo {
+        width: 40px; /* Adjust logo size for mobile */
+        height: 40px; /* Adjust logo size for mobile */
+    }
+  
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Stack the nav items vertically and center */
+        padding: 0;
+    }
+  
+    .nav-item {
+        margin: 5px 0; /* Reduce space between nav items */
+    }
+  
+    .nav-item a {
+        font-size: 1em; /* Adjust link size if necessary */
+    }
+  
+    .business-card {
+        margin-top: 10px; /* Add space between nav and business card */
+    }
+  
+    .business-card a {
+        font-size: 1em;
+    }
+  
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column grid for mobile */
+    }
+  
+    .grid-item img {
+        height: auto; /* Adjust image height to maintain aspect ratio */
+    }
+  
+    .modal-content {
+        width: 90%; /* Adjust modal width for smaller screens */
+    }
+
+    .about-section,
+    .experience-section,
+    .extracurriculars-section {
+        margin: 20px 10px; /* Reduce margin for mobile */
+    }
+    
+    .timeline-content,
+    .extracurricular-content {
+        margin-left: 0; /* Align content to the edge for mobile */
+        padding: 15px;
+    }
+
+    .timeline {
+        border-left: none; /* Optionally remove the timeline border for mobile */
+    }
+
+    .timeline-dot {
+        position: relative; /* Adjust dot position for mobile if keeping the timeline */
+        left: 0;
+    }
+
+}
+
+/* Tablet View */
+@media (min-width: 768px) and (max-width: 1024px) {
+    body, html {
+        font-size: 16px; /* Adjust base font size for tablets */
+    }
+
+    .text-center {
+        font-size: 18px; /* Adjust text size for tablets */
+        padding: 0 20px; /* Add padding on the sides */
+    }
+  
+    .main-heading {
+        font-size: 40px; /* Adjust heading size for tablets */
+    }
+  
+    .tagline {
+        font-size: 20px; /* Adjust tagline size for tablets */
+    }
+  
+    .logo-container img,
+    .emoji-logo {
+        width: 60px; /* Adjust logo size for tablets */
+        height: 60px; /* Adjust logo size for tablets */
+    }
+  
+    .nav-item {
+        margin: 0 15px; /* Adjust space between nav items for tablets */
+    }
+  
+    .nav-item a {
+        font-size: 1.1em; /* Adjust link size for tablets */
+    }
+  
+    .business-card a {
+        font-size: 1.1em;
+    }
+  
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr); /* Three column grid for tablets */
+    }
+  
+    .modal-content {
+        width: 80%; /* Adjust modal width for medium screens */
+    }
+
+    .about-section,
+    .experience-section,
+    .extracurriculars-section {
+        margin: 40px; /* Adjust margins for medium-sized screens */
+    }
+}
