@@ -9,7 +9,7 @@ body, html {
   
   .bg {
 	/* The image used */
-	background-image: url('background.jpg');
+	background-image: url('starry-night-gilbert-rondilla-photography.jpg');
   
 	/* Full height */
 	height: 100%;
@@ -71,6 +71,16 @@ body, html {
   
   .logo-container img {
 	height: 50px; /* Adjust as needed */
+  }
+  .logo-container a {
+	background-color: #ffffff; /* Light background for the emoji link */
+	border-radius: 50%; /* Circular background */
+	width: 50px; /* Set the width */
+	height: 50px; /* Set the height */
+	display: inline-flex; /* Use flex to center content */
+	align-items: center; /* Center content vertically */
+	justify-content: center; /* Center content horizontally */
+	text-decoration: none; /* Remove underline from the link */
   }
   .emoji-logo {
 	font-size: 50px; /* Adjust size as needed */
